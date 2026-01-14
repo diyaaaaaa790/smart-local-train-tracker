@@ -2,6 +2,9 @@ import Navbar from "../components/Navbar";
 import SearchCard from "../components/SearchCard";
 import TrainStatusCard from "../components/TrainStatusCard";
 import AlternativeCard from "../components/AlternativeCard";
+import StatCard from "../components/StatCard";
+import RecentSearches from "../components/RecentSearches";
+import Footer from "../components/Footer";
 import "../styles/main.css";
 
 export default function Home() {
@@ -20,10 +23,9 @@ export default function Home() {
 
         <SearchCard />
 
-        {/* Live Train Status */}
+        {/* Live Status */}
         <section className="status-section">
           <h2>Live Train Status</h2>
-
           <div className="status-grid">
             <TrainStatusCard
               name="Chennai Local #12345"
@@ -33,7 +35,6 @@ export default function Home() {
               expected="10:30 AM"
               station="Guindy"
             />
-
             <TrainStatusCard
               name="Express Local #67890"
               route="Chennai Central → Velachery"
@@ -45,26 +46,29 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Stats */}
+        <section className="stats-section">
+          <StatCard label="On Time Today" value="78%" />
+          <StatCard label="Avg Delay" value="12 min" />
+          <StatCard label="Trains Tracked" value="247" />
+          <StatCard label="Active Users" value="15.2k" />
+        </section>
+
         {/* Alternatives */}
         <section className="alt-section">
           <h2>Alternative Travel Options</h2>
-
           <div className="alt-grid">
-            <AlternativeCard
-              title="Next Local Train"
-              description="Departs at 10:50 AM"
-            />
-            <AlternativeCard
-              title="Bus Route"
-              description="Route 21B available"
-            />
-            <AlternativeCard
-              title="Metro Connection"
-              description="Blue Line from Guindy"
-            />
+            <AlternativeCard title="Next Local Train" description="10:50 AM" />
+            <AlternativeCard title="Bus Route" description="Route 21B" />
+            <AlternativeCard title="Metro Connection" description="Blue Line" />
           </div>
         </section>
+
+        {/* Recent */}
+        <RecentSearches />
       </main>
+
+      <Footer />
     </>
   );
 }
