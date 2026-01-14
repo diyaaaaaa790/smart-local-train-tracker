@@ -211,3 +211,56 @@ input, select {
   font-size: 12px;
 }
 
+/* Stats */
+.stats-section {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.stat-card h3 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+/* Recent */
+.recent-section {
+  margin-top: 60px;
+}
+
+.recent-list {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.recent-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.recent-item:last-child {
+  border-bottom: none;
+}
+
+/* Footer */
+.footer {
+  margin-top: 80px;
+  padding: 20px;
+  text-align: center;
+  background: #0f172a;
+  color: #cbd5f5;
+}
+
